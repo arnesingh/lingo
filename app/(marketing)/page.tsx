@@ -21,7 +21,7 @@ export default function Home() {
         <h1 className="text-xl lg:text-3xl font-bold text-neutral-600 max-w-[480px] text-center">
           Learn, practice and master new languages with Lingo.
         </h1>
-        <div>
+        <div className="flex flex-col gap-2 items-center max-w-[330px] w-full">
           <ClerkLoading>
             <Loader className="h5 w-5 text-muted-foreground animate-spin"></Loader>
           </ClerkLoading>
@@ -32,18 +32,20 @@ export default function Home() {
                 afterSignInUrl="/learn"
                 afterSignUpUrl="learn"
               >
-                <Button>Get Started</Button>
+                <Button variant="secondry">Get Started</Button>
               </SignUpButton>
               <SignInButton
                 mode="modal"
                 afterSignInUrl="/learn"
                 afterSignUpUrl="learn"
               >
-                <Button>I already have an account</Button>
+                <Button variant="primaryOutline">
+                  I already have an account
+                </Button>
               </SignInButton>
             </SignedOut>
             <SignedIn>
-              <Button size="lg" className="w-full" asChild>
+              <Button size="lg" className="w-full" asChild variant="secondry">
                 <Link href="/learn">Continue Learning</Link>
               </Button>
             </SignedIn>

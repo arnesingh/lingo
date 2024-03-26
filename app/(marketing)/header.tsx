@@ -33,7 +33,9 @@ export const Header = () => {
               afterSignInUrl="/learn"
               afterSignUpUrl="/learn"
             >
-              <Button size="lg">Login</Button>
+              <Button size="lg" variant="ghost">
+                Login
+              </Button>
             </SignInButton>
           </SignedOut>
         </ClerkLoaded>
